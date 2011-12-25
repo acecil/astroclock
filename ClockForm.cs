@@ -83,8 +83,9 @@ namespace AstroClock
             lblGrnMeanTimeVal.Text = localTimeGrn.ToString("HH:mm:ss");
             lblPlMeanTimeVal.Text = localTimePl.ToString("HH:mm:ss");
             eot = eot.Add(new TimeSpan(0, 0, 0, 0, 500));
-            lblGrnEqTimeVal.Text = eot.ToString(@"hh\:mm\:ss");
-            lblPlEqTimeVal.Text = eot.ToString(@"hh\:mm\:ss");
+            lblGrnEqTimeVal.Text = (eot.Ticks < 0 ?"-":"") + eot.ToString(@"hh\:mm\:ss");
+            lblPlEqTimeVal.Text = lblGrnEqTimeVal.Text;
+            //lblPlEqTimeVal.Text = eot.ToString(@"hh\:mm\:ss");
             lblGrnSolTimeVal.Text = solarTimeGrn.ToString("HH:mm:ss");
             lblPlSolTimeVal.Text = solarTimePl.ToString("HH:mm:ss");
             lblGrnSidTimeVal.Text = siderealTimeGrn.ToString(@"hh\:mm\:ss");
@@ -96,7 +97,12 @@ namespace AstroClock
             localLongitude = longitude;
             longitudeAdjustment = localLongitude / 360;
             location = name;
-            lblPl.Text = location + " (" + localLongitude.ToString() + " degrees)";
+            string DisplayLoc = (Math.Floor (Math.Abs(localLongitude)) ).ToString("0") + "° ";     //(localLongitude>0)?"E":"W";
+            DisplayLoc += (Math.Floor((60* Math.Abs( localLongitude)) % 60)).ToString("00") + "' ";
+            DisplayLoc += (Math.Floor((.5 + 3600 * Math.Abs(localLongitude)) % 60)).ToString("00") + "\" ";
+            DisplayLoc += (localLongitude == 0 ? "" : (localLongitude > 0) ? "E" : "W");
+            lblPl.Text = location + " (" + DisplayLoc + ")";
+            //lblPl.Text = location + " (" + localLongitude.ToString() + " degrees " + ((localLongitude > 0) ? "E" : "W") + ")";
         }
 
         private void changeLocationToolStripMenuItem_Click(object sender, EventArgs e)

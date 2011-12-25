@@ -49,12 +49,42 @@ namespace AstroClock
         {
             get
             {
-                return (double)longitudeVal.Value;
+                return decompose(longitudetext.Text);
             }
             set
             {
-                longitudeVal.Value = (Decimal)value;
+                longitudetext.Text = value.ToString();
+            }
+        }
+        private double decompose(string ltext)
+
+        {
+            bool numeric = true; 
+            ltext = ltext.Trim();
+            foreach (char i in ltext)
+            {
+                if (!(i >= '0' && i <= '9' || i == '+' || i == '-' || i == '.' || i == ','))
+                { numeric = false;
+                break;
+                }
+            }
+            if (numeric)
+            {
+                return Double.Parse(ltext);
+            }
+            else
+            {
+                int d = 0; int m = 0; int s = 0; double vv;
+                d = ltext.IndexOf('d');
+                vv= Double.Parse(ltext.Substring(0,d));
+                if(vv <0) numeric=true;
+                m = ltext.IndexOf('m');
+                vv += (numeric ? -1 : 1) * Double.Parse(ltext.Substring(d + 1, m-d-1))/60;
+                s = ltext.IndexOf('s');
+                vv += (numeric ? -1 : 1) * Double.Parse(ltext.Substring(m + 1, s-m-1))/3600;
+                return vv;
             }
         }
     }
 }
+
