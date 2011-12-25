@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 
 namespace AstroClock
 {
@@ -28,10 +29,11 @@ namespace AstroClock
             coss[4] = 0.0052571745421124;
             coss[5] = 0.00554442532098614;
 
+            setLocation(0.464497, "KEGS, Chelmsford");
+
             timer.Tick += new EventHandler(UpdateClock);
             timer.Interval = 100;
             timer.Start();
-
         }
 
         private void UpdateClock(Object o, EventArgs e)
@@ -72,11 +74,30 @@ namespace AstroClock
             lblPlSidTimeVal.Text = siderealTimePl.ToString(@"hh\:mm\:ss");
         }
 
+        private void setLocation(double longitude, String name)
+        {
+            localLongitude = longitude;
+            longitudeAdjustment = localLongitude / 360;
+            location = name;
+            lblPl.Text = location + " (" + localLongitude.ToString() + " degrees)";
+        }
+
+        private void changeLocationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SetLocationForm setLoc = new SetLocationForm();
+            setLoc.Location = location;
+            setLoc.Longitude = localLongitude;
+            if (setLoc.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                setLocation(setLoc.Longitude, setLoc.Location);
+            }
+        }
+
         private static double dateToDouble(DateTime date)
         {
             DateTime epoch = new DateTime(1900, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddDays(-2);
             TimeSpan t = (date - epoch);
-            return (double)t.Milliseconds / 1000 + t.TotalSeconds;
+            return t.TotalSeconds;
         }
 
         private static DateTime doubleToDate(double unix)
@@ -90,8 +111,9 @@ namespace AstroClock
         private DateTime periHelionExample = new DateTime(2011, 01, 02, 22, 56, 0);
         private const double siderealYear = tropicalYear + 1;
         private double siderealTimeOrigin = dateToDouble(new DateTime(2000, 01, 01, 12, 0, 0).ToUniversalTime());
-        private const double localLongitude = 0.464497; // Degrees
-        private const double longitudeAdjustment = localLongitude / 360; // Days
+        private double localLongitude; // Degrees
+        private double longitudeAdjustment; // Days
+        private String location;
         private double[] sins = new double[6];
         private double[] coss = new double[6];
         private double[] vals = new double[6];

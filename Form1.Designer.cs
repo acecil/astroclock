@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblGrnPl = new System.Windows.Forms.Label();
             this.lblGrnMeanTime = new System.Windows.Forms.Label();
             this.lblGrnMeanTimeVal = new System.Windows.Forms.Label();
@@ -46,259 +47,438 @@
             this.lblPlSidTimeVal = new System.Windows.Forms.Label();
             this.lblGrnSidTime = new System.Windows.Forms.Label();
             this.lblPlSidTime = new System.Windows.Forms.Label();
-            this.picGrn = new System.Windows.Forms.PictureBox();
-            this.picPl = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.picGrn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPl)).BeginInit();
+            this.layoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.changeLocationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.layoutPanel.SuspendLayout();
+            this.contextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblGrnPl
             // 
+            this.lblGrnPl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.lblGrnPl.AutoSize = true;
             this.lblGrnPl.BackColor = System.Drawing.Color.Yellow;
-            this.lblGrnPl.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGrnPl.Location = new System.Drawing.Point(220, 9);
+            this.layoutPanel.SetColumnSpan(this.lblGrnPl, 6);
+            this.lblGrnPl.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGrnPl.Location = new System.Drawing.Point(0, 0);
+            this.lblGrnPl.Margin = new System.Windows.Forms.Padding(0);
             this.lblGrnPl.Name = "lblGrnPl";
-            this.lblGrnPl.Size = new System.Drawing.Size(155, 33);
+            this.lblGrnPl.Size = new System.Drawing.Size(1135, 59);
             this.lblGrnPl.TabIndex = 0;
             this.lblGrnPl.Text = "Greenwich";
+            this.lblGrnPl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblGrnMeanTime
             // 
+            this.lblGrnMeanTime.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.lblGrnMeanTime.AutoSize = true;
             this.lblGrnMeanTime.BackColor = System.Drawing.Color.Yellow;
+            this.layoutPanel.SetColumnSpan(this.lblGrnMeanTime, 2);
             this.lblGrnMeanTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGrnMeanTime.Location = new System.Drawing.Point(12, 47);
+            this.lblGrnMeanTime.Location = new System.Drawing.Point(0, 59);
+            this.lblGrnMeanTime.Margin = new System.Windows.Forms.Padding(0);
             this.lblGrnMeanTime.Name = "lblGrnMeanTime";
-            this.lblGrnMeanTime.Size = new System.Drawing.Size(161, 33);
+            this.lblGrnMeanTime.Size = new System.Drawing.Size(378, 59);
             this.lblGrnMeanTime.TabIndex = 1;
             this.lblGrnMeanTime.Text = "Mean Time";
+            this.lblGrnMeanTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblGrnMeanTimeVal
             // 
+            this.lblGrnMeanTimeVal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.lblGrnMeanTimeVal.AutoSize = true;
             this.lblGrnMeanTimeVal.BackColor = System.Drawing.Color.Yellow;
+            this.layoutPanel.SetColumnSpan(this.lblGrnMeanTimeVal, 2);
             this.lblGrnMeanTimeVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGrnMeanTimeVal.Location = new System.Drawing.Point(31, 86);
+            this.lblGrnMeanTimeVal.Location = new System.Drawing.Point(0, 118);
+            this.lblGrnMeanTimeVal.Margin = new System.Windows.Forms.Padding(0);
             this.lblGrnMeanTimeVal.Name = "lblGrnMeanTimeVal";
-            this.lblGrnMeanTimeVal.Size = new System.Drawing.Size(127, 33);
+            this.lblGrnMeanTimeVal.Size = new System.Drawing.Size(378, 59);
             this.lblGrnMeanTimeVal.TabIndex = 2;
             this.lblGrnMeanTimeVal.Text = "00:00:00";
+            this.lblGrnMeanTimeVal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblGrnEqTime
             // 
+            this.lblGrnEqTime.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.lblGrnEqTime.AutoSize = true;
             this.lblGrnEqTime.BackColor = System.Drawing.Color.Yellow;
+            this.layoutPanel.SetColumnSpan(this.lblGrnEqTime, 2);
             this.lblGrnEqTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGrnEqTime.Location = new System.Drawing.Point(179, 47);
+            this.lblGrnEqTime.Location = new System.Drawing.Point(378, 59);
+            this.lblGrnEqTime.Margin = new System.Windows.Forms.Padding(0);
             this.lblGrnEqTime.Name = "lblGrnEqTime";
-            this.lblGrnEqTime.Size = new System.Drawing.Size(235, 33);
+            this.lblGrnEqTime.Size = new System.Drawing.Size(378, 59);
             this.lblGrnEqTime.TabIndex = 3;
             this.lblGrnEqTime.Text = "Equation of Time";
+            this.lblGrnEqTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblGrnEqTimeVal
             // 
+            this.lblGrnEqTimeVal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.lblGrnEqTimeVal.AutoSize = true;
             this.lblGrnEqTimeVal.BackColor = System.Drawing.Color.Yellow;
+            this.layoutPanel.SetColumnSpan(this.lblGrnEqTimeVal, 2);
             this.lblGrnEqTimeVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGrnEqTimeVal.Location = new System.Drawing.Point(230, 86);
+            this.lblGrnEqTimeVal.Location = new System.Drawing.Point(378, 118);
+            this.lblGrnEqTimeVal.Margin = new System.Windows.Forms.Padding(0);
             this.lblGrnEqTimeVal.Name = "lblGrnEqTimeVal";
-            this.lblGrnEqTimeVal.Size = new System.Drawing.Size(127, 33);
+            this.lblGrnEqTimeVal.Size = new System.Drawing.Size(378, 59);
             this.lblGrnEqTimeVal.TabIndex = 4;
             this.lblGrnEqTimeVal.Text = "00:00:00";
+            this.lblGrnEqTimeVal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblGrnSolTime
             // 
+            this.lblGrnSolTime.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.lblGrnSolTime.AutoSize = true;
             this.lblGrnSolTime.BackColor = System.Drawing.Color.Yellow;
+            this.layoutPanel.SetColumnSpan(this.lblGrnSolTime, 2);
             this.lblGrnSolTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGrnSolTime.Location = new System.Drawing.Point(420, 47);
+            this.lblGrnSolTime.Location = new System.Drawing.Point(756, 59);
+            this.lblGrnSolTime.Margin = new System.Windows.Forms.Padding(0);
             this.lblGrnSolTime.Name = "lblGrnSolTime";
-            this.lblGrnSolTime.Size = new System.Drawing.Size(157, 33);
+            this.lblGrnSolTime.Size = new System.Drawing.Size(379, 59);
             this.lblGrnSolTime.TabIndex = 5;
             this.lblGrnSolTime.Text = "Solar Time";
+            this.lblGrnSolTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblGrnSolTimeVal
             // 
+            this.lblGrnSolTimeVal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.lblGrnSolTimeVal.AutoSize = true;
             this.lblGrnSolTimeVal.BackColor = System.Drawing.Color.Yellow;
+            this.layoutPanel.SetColumnSpan(this.lblGrnSolTimeVal, 2);
             this.lblGrnSolTimeVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGrnSolTimeVal.Location = new System.Drawing.Point(436, 86);
+            this.lblGrnSolTimeVal.Location = new System.Drawing.Point(756, 118);
+            this.lblGrnSolTimeVal.Margin = new System.Windows.Forms.Padding(0);
             this.lblGrnSolTimeVal.Name = "lblGrnSolTimeVal";
-            this.lblGrnSolTimeVal.Size = new System.Drawing.Size(127, 33);
+            this.lblGrnSolTimeVal.Size = new System.Drawing.Size(379, 59);
             this.lblGrnSolTimeVal.TabIndex = 6;
             this.lblGrnSolTimeVal.Text = "00:00:00";
+            this.lblGrnSolTimeVal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblGrnSidTimeVal
             // 
+            this.lblGrnSidTimeVal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.lblGrnSidTimeVal.AutoSize = true;
             this.lblGrnSidTimeVal.BackColor = System.Drawing.Color.Yellow;
+            this.layoutPanel.SetColumnSpan(this.lblGrnSidTimeVal, 2);
             this.lblGrnSidTimeVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGrnSidTimeVal.Location = new System.Drawing.Point(320, 137);
+            this.lblGrnSidTimeVal.Location = new System.Drawing.Point(567, 177);
+            this.lblGrnSidTimeVal.Margin = new System.Windows.Forms.Padding(0);
             this.lblGrnSidTimeVal.Name = "lblGrnSidTimeVal";
-            this.lblGrnSidTimeVal.Size = new System.Drawing.Size(127, 33);
+            this.lblGrnSidTimeVal.Size = new System.Drawing.Size(378, 59);
             this.lblGrnSidTimeVal.TabIndex = 7;
             this.lblGrnSidTimeVal.Text = "00:00:00";
+            this.lblGrnSidTimeVal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblPl
             // 
             this.lblPl.AutoSize = true;
             this.lblPl.BackColor = System.Drawing.Color.Cyan;
-            this.lblPl.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPl.Location = new System.Drawing.Point(165, 187);
+            this.layoutPanel.SetColumnSpan(this.lblPl, 6);
+            this.lblPl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblPl.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPl.Location = new System.Drawing.Point(0, 236);
+            this.lblPl.Margin = new System.Windows.Forms.Padding(0);
             this.lblPl.Name = "lblPl";
-            this.lblPl.Size = new System.Drawing.Size(261, 33);
+            this.lblPl.Size = new System.Drawing.Size(1135, 59);
             this.lblPl.TabIndex = 8;
             this.lblPl.Text = "KEGS, Chelmsford";
+            this.lblPl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblPlMeanTime
             // 
             this.lblPlMeanTime.AutoSize = true;
             this.lblPlMeanTime.BackColor = System.Drawing.Color.Cyan;
+            this.layoutPanel.SetColumnSpan(this.lblPlMeanTime, 2);
+            this.lblPlMeanTime.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblPlMeanTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlMeanTime.Location = new System.Drawing.Point(12, 226);
+            this.lblPlMeanTime.Location = new System.Drawing.Point(0, 295);
+            this.lblPlMeanTime.Margin = new System.Windows.Forms.Padding(0);
             this.lblPlMeanTime.Name = "lblPlMeanTime";
-            this.lblPlMeanTime.Size = new System.Drawing.Size(161, 33);
+            this.lblPlMeanTime.Size = new System.Drawing.Size(378, 59);
             this.lblPlMeanTime.TabIndex = 9;
             this.lblPlMeanTime.Text = "Mean Time";
+            this.lblPlMeanTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblPlEqTime
             // 
             this.lblPlEqTime.AutoSize = true;
             this.lblPlEqTime.BackColor = System.Drawing.Color.Cyan;
+            this.layoutPanel.SetColumnSpan(this.lblPlEqTime, 2);
+            this.lblPlEqTime.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblPlEqTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlEqTime.Location = new System.Drawing.Point(179, 226);
+            this.lblPlEqTime.Location = new System.Drawing.Point(378, 295);
+            this.lblPlEqTime.Margin = new System.Windows.Forms.Padding(0);
             this.lblPlEqTime.Name = "lblPlEqTime";
-            this.lblPlEqTime.Size = new System.Drawing.Size(235, 33);
+            this.lblPlEqTime.Size = new System.Drawing.Size(378, 59);
             this.lblPlEqTime.TabIndex = 10;
             this.lblPlEqTime.Text = "Equation of Time";
+            this.lblPlEqTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblPlSolTime
             // 
             this.lblPlSolTime.AutoSize = true;
             this.lblPlSolTime.BackColor = System.Drawing.Color.Cyan;
+            this.layoutPanel.SetColumnSpan(this.lblPlSolTime, 2);
+            this.lblPlSolTime.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblPlSolTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlSolTime.Location = new System.Drawing.Point(421, 226);
+            this.lblPlSolTime.Location = new System.Drawing.Point(756, 295);
+            this.lblPlSolTime.Margin = new System.Windows.Forms.Padding(0);
             this.lblPlSolTime.Name = "lblPlSolTime";
-            this.lblPlSolTime.Size = new System.Drawing.Size(157, 33);
+            this.lblPlSolTime.Size = new System.Drawing.Size(379, 59);
             this.lblPlSolTime.TabIndex = 11;
             this.lblPlSolTime.Text = "Solar Time";
+            this.lblPlSolTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblPlMeanTimeVal
             // 
             this.lblPlMeanTimeVal.AutoSize = true;
             this.lblPlMeanTimeVal.BackColor = System.Drawing.Color.Cyan;
+            this.layoutPanel.SetColumnSpan(this.lblPlMeanTimeVal, 2);
+            this.lblPlMeanTimeVal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblPlMeanTimeVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlMeanTimeVal.Location = new System.Drawing.Point(31, 266);
+            this.lblPlMeanTimeVal.Location = new System.Drawing.Point(0, 354);
+            this.lblPlMeanTimeVal.Margin = new System.Windows.Forms.Padding(0);
             this.lblPlMeanTimeVal.Name = "lblPlMeanTimeVal";
-            this.lblPlMeanTimeVal.Size = new System.Drawing.Size(127, 33);
+            this.lblPlMeanTimeVal.Size = new System.Drawing.Size(378, 59);
             this.lblPlMeanTimeVal.TabIndex = 12;
             this.lblPlMeanTimeVal.Text = "00:00:00";
+            this.lblPlMeanTimeVal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblPlEqTimeVal
             // 
             this.lblPlEqTimeVal.AutoSize = true;
             this.lblPlEqTimeVal.BackColor = System.Drawing.Color.Cyan;
+            this.layoutPanel.SetColumnSpan(this.lblPlEqTimeVal, 2);
+            this.lblPlEqTimeVal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblPlEqTimeVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlEqTimeVal.Location = new System.Drawing.Point(230, 266);
+            this.lblPlEqTimeVal.Location = new System.Drawing.Point(378, 354);
+            this.lblPlEqTimeVal.Margin = new System.Windows.Forms.Padding(0);
             this.lblPlEqTimeVal.Name = "lblPlEqTimeVal";
-            this.lblPlEqTimeVal.Size = new System.Drawing.Size(127, 33);
+            this.lblPlEqTimeVal.Size = new System.Drawing.Size(378, 59);
             this.lblPlEqTimeVal.TabIndex = 13;
             this.lblPlEqTimeVal.Text = "00:00:00";
+            this.lblPlEqTimeVal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblPlSolTimeVal
             // 
             this.lblPlSolTimeVal.AutoSize = true;
             this.lblPlSolTimeVal.BackColor = System.Drawing.Color.Cyan;
+            this.layoutPanel.SetColumnSpan(this.lblPlSolTimeVal, 2);
+            this.lblPlSolTimeVal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblPlSolTimeVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlSolTimeVal.Location = new System.Drawing.Point(436, 266);
+            this.lblPlSolTimeVal.Location = new System.Drawing.Point(756, 354);
+            this.lblPlSolTimeVal.Margin = new System.Windows.Forms.Padding(0);
             this.lblPlSolTimeVal.Name = "lblPlSolTimeVal";
-            this.lblPlSolTimeVal.Size = new System.Drawing.Size(127, 33);
+            this.lblPlSolTimeVal.Size = new System.Drawing.Size(379, 59);
             this.lblPlSolTimeVal.TabIndex = 14;
             this.lblPlSolTimeVal.Text = "00:00:00";
+            this.lblPlSolTimeVal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblPlSidTimeVal
             // 
             this.lblPlSidTimeVal.AutoSize = true;
             this.lblPlSidTimeVal.BackColor = System.Drawing.Color.Cyan;
+            this.layoutPanel.SetColumnSpan(this.lblPlSidTimeVal, 2);
+            this.lblPlSidTimeVal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblPlSidTimeVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlSidTimeVal.Location = new System.Drawing.Point(320, 311);
+            this.lblPlSidTimeVal.Location = new System.Drawing.Point(567, 413);
+            this.lblPlSidTimeVal.Margin = new System.Windows.Forms.Padding(0);
             this.lblPlSidTimeVal.Name = "lblPlSidTimeVal";
-            this.lblPlSidTimeVal.Size = new System.Drawing.Size(127, 33);
+            this.lblPlSidTimeVal.Size = new System.Drawing.Size(378, 65);
             this.lblPlSidTimeVal.TabIndex = 15;
             this.lblPlSidTimeVal.Text = "00:00:00";
+            this.lblPlSidTimeVal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblGrnSidTime
             // 
             this.lblGrnSidTime.AutoSize = true;
             this.lblGrnSidTime.BackColor = System.Drawing.Color.Yellow;
+            this.layoutPanel.SetColumnSpan(this.lblGrnSidTime, 2);
+            this.lblGrnSidTime.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblGrnSidTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGrnSidTime.Location = new System.Drawing.Point(99, 137);
+            this.lblGrnSidTime.Location = new System.Drawing.Point(189, 177);
+            this.lblGrnSidTime.Margin = new System.Windows.Forms.Padding(0);
             this.lblGrnSidTime.Name = "lblGrnSidTime";
-            this.lblGrnSidTime.Size = new System.Drawing.Size(196, 33);
+            this.lblGrnSidTime.Size = new System.Drawing.Size(378, 59);
             this.lblGrnSidTime.TabIndex = 16;
             this.lblGrnSidTime.Text = "Sidereal Time";
+            this.lblGrnSidTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblPlSidTime
             // 
             this.lblPlSidTime.AutoSize = true;
             this.lblPlSidTime.BackColor = System.Drawing.Color.Cyan;
+            this.layoutPanel.SetColumnSpan(this.lblPlSidTime, 2);
+            this.lblPlSidTime.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblPlSidTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlSidTime.Location = new System.Drawing.Point(99, 311);
+            this.lblPlSidTime.Location = new System.Drawing.Point(189, 413);
+            this.lblPlSidTime.Margin = new System.Windows.Forms.Padding(0);
             this.lblPlSidTime.Name = "lblPlSidTime";
-            this.lblPlSidTime.Size = new System.Drawing.Size(196, 33);
+            this.lblPlSidTime.Size = new System.Drawing.Size(378, 65);
             this.lblPlSidTime.TabIndex = 17;
             this.lblPlSidTime.Text = "Sidereal Time";
+            this.lblPlSidTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // picGrn
+            // layoutPanel
             // 
-            this.picGrn.BackColor = System.Drawing.Color.Yellow;
-            this.picGrn.Location = new System.Drawing.Point(-2, -2);
-            this.picGrn.Name = "picGrn";
-            this.picGrn.Size = new System.Drawing.Size(591, 183);
-            this.picGrn.TabIndex = 18;
-            this.picGrn.TabStop = false;
+            this.layoutPanel.ColumnCount = 6;
+            this.layoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.layoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.layoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.layoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.layoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.layoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.layoutPanel.Controls.Add(this.label7, 7, 7);
+            this.layoutPanel.Controls.Add(this.label6, 0, 3);
+            this.layoutPanel.Controls.Add(this.label5, 0, 7);
+            this.layoutPanel.Controls.Add(this.lblGrnPl, 0, 0);
+            this.layoutPanel.Controls.Add(this.lblPlSidTime, 1, 7);
+            this.layoutPanel.Controls.Add(this.lblGrnSidTime, 1, 3);
+            this.layoutPanel.Controls.Add(this.lblPlSidTimeVal, 3, 7);
+            this.layoutPanel.Controls.Add(this.lblPlSolTimeVal, 4, 6);
+            this.layoutPanel.Controls.Add(this.lblPlEqTimeVal, 2, 6);
+            this.layoutPanel.Controls.Add(this.lblPlMeanTimeVal, 0, 6);
+            this.layoutPanel.Controls.Add(this.lblPlSolTime, 4, 5);
+            this.layoutPanel.Controls.Add(this.lblPlEqTime, 2, 5);
+            this.layoutPanel.Controls.Add(this.lblPlMeanTime, 0, 5);
+            this.layoutPanel.Controls.Add(this.lblPl, 0, 4);
+            this.layoutPanel.Controls.Add(this.lblGrnSidTimeVal, 3, 3);
+            this.layoutPanel.Controls.Add(this.lblGrnSolTimeVal, 4, 2);
+            this.layoutPanel.Controls.Add(this.lblGrnSolTime, 4, 1);
+            this.layoutPanel.Controls.Add(this.lblGrnEqTimeVal, 2, 2);
+            this.layoutPanel.Controls.Add(this.lblGrnEqTime, 2, 1);
+            this.layoutPanel.Controls.Add(this.lblGrnMeanTimeVal, 0, 2);
+            this.layoutPanel.Controls.Add(this.lblGrnMeanTime, 0, 1);
+            this.layoutPanel.Controls.Add(this.label1, 6, 3);
+            this.layoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.layoutPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.layoutPanel.Name = "layoutPanel";
+            this.layoutPanel.RowCount = 8;
+            this.layoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.layoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.layoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.layoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.layoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.layoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.layoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.layoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.layoutPanel.Size = new System.Drawing.Size(1135, 478);
+            this.layoutPanel.TabIndex = 20;
             // 
-            // picPl
+            // label7
             // 
-            this.picPl.BackColor = System.Drawing.Color.Cyan;
-            this.picPl.Location = new System.Drawing.Point(-2, 178);
-            this.picPl.Name = "picPl";
-            this.picPl.Size = new System.Drawing.Size(591, 183);
-            this.picPl.TabIndex = 19;
-            this.picPl.TabStop = false;
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Cyan;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(945, 413);
+            this.label7.Margin = new System.Windows.Forms.Padding(0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(190, 65);
+            this.label7.TabIndex = 25;
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Yellow;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(0, 177);
+            this.label6.Margin = new System.Windows.Forms.Padding(0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(189, 59);
+            this.label6.TabIndex = 24;
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Cyan;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(0, 413);
+            this.label5.Margin = new System.Windows.Forms.Padding(0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(189, 65);
+            this.label5.TabIndex = 23;
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Yellow;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(945, 177);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(190, 59);
+            this.label1.TabIndex = 19;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // contextMenu
+            // 
+            this.contextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.changeLocationToolStripMenuItem});
+            this.contextMenu.Name = "contextMenu";
+            this.contextMenu.Size = new System.Drawing.Size(174, 26);
+            // 
+            // changeLocationToolStripMenuItem
+            // 
+            this.changeLocationToolStripMenuItem.Name = "changeLocationToolStripMenuItem";
+            this.changeLocationToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.changeLocationToolStripMenuItem.Text = "Change Location...";
+            this.changeLocationToolStripMenuItem.Click += new System.EventHandler(this.changeLocationToolStripMenuItem_Click);
             // 
             // ClockForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(588, 361);
-            this.Controls.Add(this.lblPlSidTime);
-            this.Controls.Add(this.lblGrnSidTime);
-            this.Controls.Add(this.lblPlSidTimeVal);
-            this.Controls.Add(this.lblPlSolTimeVal);
-            this.Controls.Add(this.lblPlEqTimeVal);
-            this.Controls.Add(this.lblPlMeanTimeVal);
-            this.Controls.Add(this.lblPlSolTime);
-            this.Controls.Add(this.lblPlEqTime);
-            this.Controls.Add(this.lblPlMeanTime);
-            this.Controls.Add(this.lblPl);
-            this.Controls.Add(this.lblGrnSidTimeVal);
-            this.Controls.Add(this.lblGrnSolTimeVal);
-            this.Controls.Add(this.lblGrnSolTime);
-            this.Controls.Add(this.lblGrnEqTimeVal);
-            this.Controls.Add(this.lblGrnEqTime);
-            this.Controls.Add(this.lblGrnMeanTimeVal);
-            this.Controls.Add(this.lblGrnMeanTime);
-            this.Controls.Add(this.lblGrnPl);
-            this.Controls.Add(this.picGrn);
-            this.Controls.Add(this.picPl);
+            this.ClientSize = new System.Drawing.Size(1135, 478);
+            this.ContextMenuStrip = this.contextMenu;
+            this.Controls.Add(this.layoutPanel);
             this.Name = "ClockForm";
+            this.ShowIcon = false;
             this.Text = "Astro Clock";
-            ((System.ComponentModel.ISupportInitialize)(this.picGrn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPl)).EndInit();
+            this.layoutPanel.ResumeLayout(false);
+            this.layoutPanel.PerformLayout();
+            this.contextMenu.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -322,8 +502,13 @@
         private System.Windows.Forms.Label lblPlSidTimeVal;
         private System.Windows.Forms.Label lblGrnSidTime;
         private System.Windows.Forms.Label lblPlSidTime;
-        private System.Windows.Forms.PictureBox picGrn;
-        private System.Windows.Forms.PictureBox picPl;
+        private System.Windows.Forms.TableLayoutPanel layoutPanel;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ContextMenuStrip contextMenu;
+        private System.Windows.Forms.ToolStripMenuItem changeLocationToolStripMenuItem;
     }
 }
 
