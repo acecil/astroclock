@@ -33,7 +33,7 @@ namespace AstroClock
             InitializeComponent();
         }
 
-        public String Location
+        public String LocationSomethingElse
         {
             get
             {
@@ -49,14 +49,34 @@ namespace AstroClock
         {
             get
             {
-                return decompose(longitudetext.Text);
+                return longitudeVal;
             }
             set
             {
-                longitudetext.Text = value.ToString();
+                longitudeVal = value;
+                NUDDegrees.Enabled = true;
+                NUDDegrees.Value = (decimal)Math.Abs(longitudeVal);
+                NUDDMSDegrees.Enabled = false;
+                NUDDMSDegrees.Value = (decimal)Math.Floor(Math.Abs(longitudeVal ));
+                NUDDMSMinutes.Enabled = false;
+                NUDDMSMinutes.Value = (decimal)Math.Floor(60 * (Math.Abs(longitudeVal) % 1));
+                NUDDMSSeconds.Enabled = false;
+                NUDDMSSeconds.Value = (decimal)Math.Round((((60 * Math.Abs(longitudeVal)) % 1) * 60), 1);
+                NUDRadians.Enabled = false;
+                NUDRadians.Value= (decimal) Math.Round((Math.PI* Math.Abs(longitudeVal))/180, 4);
+                if (value < 0)
+                {
+                    radioW.Checked = true;
+                    radioE.Checked = false;
+                }
+                else
+                {
+                    radioE.Checked = true;
+                    radioW.Checked = false;
+                }
             }
         }
-        private double decompose(string ltext)
+ /*       private double decompose(string ltext)
 
         {
             bool numeric = true; 
@@ -83,6 +103,127 @@ namespace AstroClock
                 s = ltext.IndexOf('s');
                 vv += (numeric ? -1 : 1) * Double.Parse(ltext.Substring(m + 1, s-m-1))/3600;
                 return vv;
+            }
+        }
+        */
+        private void radioDD_Click(object sender, EventArgs e)
+        {
+            NUDDegrees.Enabled = true;
+            NUDDMSDegrees.Enabled = false;
+            NUDDMSMinutes.Enabled = false;
+            NUDDMSSeconds.Enabled = false;
+            NUDRadians.Enabled = false;
+        }
+
+        private void radioDMS_Click(object sender, EventArgs e)
+        {
+            NUDDegrees.Enabled = false;
+            NUDDMSDegrees.Enabled = true;
+            NUDDMSMinutes.Enabled = true;
+            NUDDMSSeconds.Enabled = true;
+            NUDRadians.Enabled = false;
+        }
+
+        private void radioRadians_Click(object sender, EventArgs e)
+        {
+            NUDDegrees.Enabled = false;
+            NUDDMSDegrees.Enabled = false;
+            NUDDMSMinutes.Enabled = false;
+            NUDDMSSeconds.Enabled = false;
+            NUDRadians.Enabled = true;
+        }
+
+        private double longitudeVal = 0.0;
+
+        private void NUDDegrees_ValueChanged(object sender, EventArgs e)
+        {
+            if (radioDD.Checked)
+            {
+                longitudeVal = (double)NUDDegrees.Value * (radioW.Checked ? -1 : 1);
+ //               NUDDegrees.Value = (decimal)Math.Abs(longitudeVal);
+                NUDDMSDegrees.Value = (decimal)Math.Floor(Math.Abs(longitudeVal));
+                NUDDMSMinutes.Value = (decimal)Math.Floor(60 * (Math.Abs(longitudeVal) % 1));
+                NUDDMSSeconds.Value = (decimal)(((60 * Math.Abs(longitudeVal)) % 1) * 60);
+                NUDRadians.Value = (decimal)(Math.PI * Math.Abs(longitudeVal)) / 180;
+            }
+        }
+
+        private void radioE_CheckedChanged(object sender, EventArgs e)
+        {
+            longitudeVal = Math.Abs(longitudeVal) * (radioW.Checked ? -1 : 1);
+        }
+
+        private void radioW_CheckedChanged(object sender, EventArgs e)
+        {
+            longitudeVal = Math.Abs(longitudeVal) * (radioW.Checked ? -1 : 1);
+        }
+
+        private void NUDDMSDegrees_ValueChanged(object sender, EventArgs e)
+        {
+            if (radioDMS.Checked)
+            {
+                longitudeVal = ((double)NUDDMSDegrees.Value + ((double)NUDDMSMinutes.Value) / 59.99999 + (double)NUDDMSSeconds.Value / 3600) * (radioW.Checked ? -1 : 1);
+
+                if (Math.Abs(longitudeVal) > 180)
+                {
+                    longitudeVal = 180 * (radioW.Checked ? -1 : 1);
+                    NUDDMSDegrees.Value = (decimal)Math.Floor(Math.Abs(longitudeVal));
+                }
+
+                NUDDegrees.Value = (decimal)Math.Abs(longitudeVal);
+                NUDDMSMinutes.Value = (decimal)Math.Floor(60 * (Math.Abs(longitudeVal) % 1));
+                NUDDMSSeconds.Value = (decimal)(((60 * Math.Abs(longitudeVal)) % 1) * 60);
+                NUDRadians.Value = (decimal)(Math.PI * Math.Abs(longitudeVal)) / 180;
+            }
+        }
+
+        private void NUDDMSMinutes_ValueChanged(object sender, EventArgs e)
+        {
+            if (radioDMS.Checked)
+            {
+                longitudeVal = ((double)NUDDMSDegrees.Value + ((double)NUDDMSMinutes.Value) / 59.99999 + (double)NUDDMSSeconds.Value / 3600) * (radioW.Checked ? -1 : 1);
+                if (Math.Abs(longitudeVal) > 180)
+                {
+                    longitudeVal = 180 * (radioW.Checked ? -1 : 1);
+                    NUDDMSMinutes.Value = (decimal)Math.Floor(60 * (Math.Abs(longitudeVal) % 1));
+                }
+                NUDDegrees.Value = (decimal)Math.Abs(longitudeVal);
+                NUDDMSDegrees.Value = (decimal)Math.Floor(Math.Abs(longitudeVal));
+                NUDDMSSeconds.Value = (decimal)(((60 * Math.Abs(longitudeVal)) % 1) * 60);
+                NUDRadians.Value = (decimal)(Math.PI * Math.Abs(longitudeVal)) / 180;
+            }
+        }
+
+        private void NUDDMSSeconds_ValueChanged(object sender, EventArgs e)
+        {
+            if (radioDMS.Checked)
+            {
+                longitudeVal = ((double)NUDDMSDegrees.Value + ((double) NUDDMSMinutes.Value) / 59.99999 + (double)NUDDMSSeconds.Value / 3600) * (radioW.Checked ? -1 : 1);
+                if (Math.Abs(longitudeVal) > 180)
+                {
+                    longitudeVal = 180 * (radioW.Checked ? -1 : 1);
+                    NUDDMSSeconds.Value = (decimal)(((60 * Math.Abs(longitudeVal)) % 1) * 60);
+                }
+                NUDDegrees.Value = (decimal)Math.Abs(longitudeVal);
+                NUDDMSDegrees.Value = (decimal)Math.Floor(Math.Abs(longitudeVal));
+                NUDDMSMinutes.Value = (decimal)Math.Floor(60 * (Math.Abs(longitudeVal) % 1));
+                NUDRadians.Value = (decimal)(Math.PI * Math.Abs(longitudeVal)) / 180;
+            }
+        }
+
+        private void NUDRadians_ValueChanged(object sender, EventArgs e)
+        {
+            if (radioRadians.Checked)
+            {
+                longitudeVal = (double)((double)NUDRadians.Value * 180 / Math.PI) * (radioW.Checked ? -1 : 1);
+                if (Math.Abs(longitudeVal) > 180)
+                {
+                    longitudeVal = 180 * (radioW.Checked ? -1 : 1);
+                }
+                NUDDegrees.Value = (decimal)Math.Abs(longitudeVal);
+                NUDDMSDegrees.Value = (decimal)Math.Floor(Math.Abs(longitudeVal));
+                NUDDMSMinutes.Value = (decimal)Math.Floor(60 * (Math.Abs(longitudeVal) % 1));
+                NUDDMSSeconds.Value = (decimal)(((60 * Math.Abs(longitudeVal)) % 1) * 60);
             }
         }
     }

@@ -78,7 +78,7 @@ namespace AstroClock
             DateTime solarTimeGrn = localTimeGrn.AddDays(deltaTaDays);
             DateTime solarTimePl = localTimePl.AddDays(deltaTaDays);
             TimeSpan siderealTimeGrn = new TimeSpan((long)(siderealTime * 24 * 60 * 60 * 1000 * 1000 * 10));
-            TimeSpan siderealTimePl = new TimeSpan((long)((siderealTime + longitudeAdjustment) * 24 * 60 * 60 * 1000 * 1000 * 10));
+            TimeSpan siderealTimePl = new TimeSpan((long)(((siderealTime + longitudeAdjustment+1)%1) * 24 * 60 * 60 * 1000 * 1000 * 10));
 
             lblGrnMeanTimeVal.Text = localTimeGrn.ToString("HH:mm:ss");
             lblPlMeanTimeVal.Text = localTimePl.ToString("HH:mm:ss");
@@ -108,11 +108,11 @@ namespace AstroClock
         private void changeLocationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SetLocationForm setLoc = new SetLocationForm();
-            setLoc.Location = location;
+            setLoc.LocationSomethingElse = location;
             setLoc.Longitude = localLongitude;
             if (setLoc.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                setLocation(setLoc.Longitude, setLoc.Location);
+                setLocation(setLoc.Longitude, setLoc.LocationSomethingElse);
             }
         }
 

@@ -87,7 +87,7 @@ namespace AstroClock
             this.lblGrnPl.Location = new System.Drawing.Point(0, 0);
             this.lblGrnPl.Margin = new System.Windows.Forms.Padding(0);
             this.lblGrnPl.Name = "lblGrnPl";
-            this.lblGrnPl.Size = new System.Drawing.Size(1135, 59);
+            this.lblGrnPl.Size = new System.Drawing.Size(1028, 59);
             this.lblGrnPl.TabIndex = 0;
             this.lblGrnPl.Text = "Greenwich";
             this.lblGrnPl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -104,7 +104,7 @@ namespace AstroClock
             this.lblGrnMeanTime.Location = new System.Drawing.Point(0, 59);
             this.lblGrnMeanTime.Margin = new System.Windows.Forms.Padding(0);
             this.lblGrnMeanTime.Name = "lblGrnMeanTime";
-            this.lblGrnMeanTime.Size = new System.Drawing.Size(378, 59);
+            this.lblGrnMeanTime.Size = new System.Drawing.Size(342, 59);
             this.lblGrnMeanTime.TabIndex = 1;
             this.lblGrnMeanTime.Text = "Mean Time";
             this.lblGrnMeanTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -121,7 +121,7 @@ namespace AstroClock
             this.lblGrnMeanTimeVal.Location = new System.Drawing.Point(0, 118);
             this.lblGrnMeanTimeVal.Margin = new System.Windows.Forms.Padding(0);
             this.lblGrnMeanTimeVal.Name = "lblGrnMeanTimeVal";
-            this.lblGrnMeanTimeVal.Size = new System.Drawing.Size(378, 59);
+            this.lblGrnMeanTimeVal.Size = new System.Drawing.Size(342, 59);
             this.lblGrnMeanTimeVal.TabIndex = 2;
             this.lblGrnMeanTimeVal.Text = "00:00:00";
             this.lblGrnMeanTimeVal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -135,10 +135,10 @@ namespace AstroClock
             this.lblGrnEqTime.BackColor = System.Drawing.Color.Yellow;
             this.layoutPanel.SetColumnSpan(this.lblGrnEqTime, 2);
             this.lblGrnEqTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGrnEqTime.Location = new System.Drawing.Point(378, 59);
+            this.lblGrnEqTime.Location = new System.Drawing.Point(342, 59);
             this.lblGrnEqTime.Margin = new System.Windows.Forms.Padding(0);
             this.lblGrnEqTime.Name = "lblGrnEqTime";
-            this.lblGrnEqTime.Size = new System.Drawing.Size(378, 59);
+            this.lblGrnEqTime.Size = new System.Drawing.Size(342, 59);
             this.lblGrnEqTime.TabIndex = 3;
             this.lblGrnEqTime.Text = "Equation of Time";
             this.lblGrnEqTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -152,10 +152,10 @@ namespace AstroClock
             this.lblGrnEqTimeVal.BackColor = System.Drawing.Color.Yellow;
             this.layoutPanel.SetColumnSpan(this.lblGrnEqTimeVal, 2);
             this.lblGrnEqTimeVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGrnEqTimeVal.Location = new System.Drawing.Point(378, 118);
+            this.lblGrnEqTimeVal.Location = new System.Drawing.Point(342, 118);
             this.lblGrnEqTimeVal.Margin = new System.Windows.Forms.Padding(0);
             this.lblGrnEqTimeVal.Name = "lblGrnEqTimeVal";
-            this.lblGrnEqTimeVal.Size = new System.Drawing.Size(378, 59);
+            this.lblGrnEqTimeVal.Size = new System.Drawing.Size(342, 59);
             this.lblGrnEqTimeVal.TabIndex = 4;
             this.lblGrnEqTimeVal.Text = "00:00:00";
             this.lblGrnEqTimeVal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -169,10 +169,10 @@ namespace AstroClock
             this.lblGrnSolTime.BackColor = System.Drawing.Color.Yellow;
             this.layoutPanel.SetColumnSpan(this.lblGrnSolTime, 2);
             this.lblGrnSolTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGrnSolTime.Location = new System.Drawing.Point(756, 59);
+            this.lblGrnSolTime.Location = new System.Drawing.Point(684, 59);
             this.lblGrnSolTime.Margin = new System.Windows.Forms.Padding(0);
             this.lblGrnSolTime.Name = "lblGrnSolTime";
-            this.lblGrnSolTime.Size = new System.Drawing.Size(379, 59);
+            this.lblGrnSolTime.Size = new System.Drawing.Size(344, 59);
             this.lblGrnSolTime.TabIndex = 5;
             this.lblGrnSolTime.Text = "Solar Time";
             this.lblGrnSolTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -186,10 +186,10 @@ namespace AstroClock
             this.lblGrnSolTimeVal.BackColor = System.Drawing.Color.Yellow;
             this.layoutPanel.SetColumnSpan(this.lblGrnSolTimeVal, 2);
             this.lblGrnSolTimeVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGrnSolTimeVal.Location = new System.Drawing.Point(756, 118);
+            this.lblGrnSolTimeVal.Location = new System.Drawing.Point(684, 118);
             this.lblGrnSolTimeVal.Margin = new System.Windows.Forms.Padding(0);
             this.lblGrnSolTimeVal.Name = "lblGrnSolTimeVal";
-            this.lblGrnSolTimeVal.Size = new System.Drawing.Size(379, 59);
+            this.lblGrnSolTimeVal.Size = new System.Drawing.Size(344, 59);
             this.lblGrnSolTimeVal.TabIndex = 6;
             this.lblGrnSolTimeVal.Text = "00:00:00";
             this.lblGrnSolTimeVal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -203,10 +203,10 @@ namespace AstroClock
             this.lblGrnSidTimeVal.BackColor = System.Drawing.Color.Yellow;
             this.layoutPanel.SetColumnSpan(this.lblGrnSidTimeVal, 2);
             this.lblGrnSidTimeVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGrnSidTimeVal.Location = new System.Drawing.Point(567, 177);
+            this.lblGrnSidTimeVal.Location = new System.Drawing.Point(513, 177);
             this.lblGrnSidTimeVal.Margin = new System.Windows.Forms.Padding(0);
             this.lblGrnSidTimeVal.Name = "lblGrnSidTimeVal";
-            this.lblGrnSidTimeVal.Size = new System.Drawing.Size(378, 59);
+            this.lblGrnSidTimeVal.Size = new System.Drawing.Size(342, 59);
             this.lblGrnSidTimeVal.TabIndex = 7;
             this.lblGrnSidTimeVal.Text = "00:00:00";
             this.lblGrnSidTimeVal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -221,7 +221,7 @@ namespace AstroClock
             this.lblPl.Location = new System.Drawing.Point(0, 236);
             this.lblPl.Margin = new System.Windows.Forms.Padding(0);
             this.lblPl.Name = "lblPl";
-            this.lblPl.Size = new System.Drawing.Size(1135, 59);
+            this.lblPl.Size = new System.Drawing.Size(1028, 59);
             this.lblPl.TabIndex = 8;
             this.lblPl.Text = "KEGS, Chelmsford";
             this.lblPl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -236,7 +236,7 @@ namespace AstroClock
             this.lblPlMeanTime.Location = new System.Drawing.Point(0, 295);
             this.lblPlMeanTime.Margin = new System.Windows.Forms.Padding(0);
             this.lblPlMeanTime.Name = "lblPlMeanTime";
-            this.lblPlMeanTime.Size = new System.Drawing.Size(378, 59);
+            this.lblPlMeanTime.Size = new System.Drawing.Size(342, 59);
             this.lblPlMeanTime.TabIndex = 9;
             this.lblPlMeanTime.Text = "Mean Time";
             this.lblPlMeanTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -248,10 +248,10 @@ namespace AstroClock
             this.layoutPanel.SetColumnSpan(this.lblPlEqTime, 2);
             this.lblPlEqTime.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblPlEqTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlEqTime.Location = new System.Drawing.Point(378, 295);
+            this.lblPlEqTime.Location = new System.Drawing.Point(342, 295);
             this.lblPlEqTime.Margin = new System.Windows.Forms.Padding(0);
             this.lblPlEqTime.Name = "lblPlEqTime";
-            this.lblPlEqTime.Size = new System.Drawing.Size(378, 59);
+            this.lblPlEqTime.Size = new System.Drawing.Size(342, 59);
             this.lblPlEqTime.TabIndex = 10;
             this.lblPlEqTime.Text = "Equation of Time";
             this.lblPlEqTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -263,10 +263,10 @@ namespace AstroClock
             this.layoutPanel.SetColumnSpan(this.lblPlSolTime, 2);
             this.lblPlSolTime.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblPlSolTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlSolTime.Location = new System.Drawing.Point(756, 295);
+            this.lblPlSolTime.Location = new System.Drawing.Point(684, 295);
             this.lblPlSolTime.Margin = new System.Windows.Forms.Padding(0);
             this.lblPlSolTime.Name = "lblPlSolTime";
-            this.lblPlSolTime.Size = new System.Drawing.Size(379, 59);
+            this.lblPlSolTime.Size = new System.Drawing.Size(344, 59);
             this.lblPlSolTime.TabIndex = 11;
             this.lblPlSolTime.Text = "Solar Time";
             this.lblPlSolTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -281,7 +281,7 @@ namespace AstroClock
             this.lblPlMeanTimeVal.Location = new System.Drawing.Point(0, 354);
             this.lblPlMeanTimeVal.Margin = new System.Windows.Forms.Padding(0);
             this.lblPlMeanTimeVal.Name = "lblPlMeanTimeVal";
-            this.lblPlMeanTimeVal.Size = new System.Drawing.Size(378, 59);
+            this.lblPlMeanTimeVal.Size = new System.Drawing.Size(342, 59);
             this.lblPlMeanTimeVal.TabIndex = 12;
             this.lblPlMeanTimeVal.Text = "00:00:00";
             this.lblPlMeanTimeVal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -293,10 +293,10 @@ namespace AstroClock
             this.layoutPanel.SetColumnSpan(this.lblPlEqTimeVal, 2);
             this.lblPlEqTimeVal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblPlEqTimeVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlEqTimeVal.Location = new System.Drawing.Point(378, 354);
+            this.lblPlEqTimeVal.Location = new System.Drawing.Point(342, 354);
             this.lblPlEqTimeVal.Margin = new System.Windows.Forms.Padding(0);
             this.lblPlEqTimeVal.Name = "lblPlEqTimeVal";
-            this.lblPlEqTimeVal.Size = new System.Drawing.Size(378, 59);
+            this.lblPlEqTimeVal.Size = new System.Drawing.Size(342, 59);
             this.lblPlEqTimeVal.TabIndex = 13;
             this.lblPlEqTimeVal.Text = "00:00:00";
             this.lblPlEqTimeVal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -308,10 +308,10 @@ namespace AstroClock
             this.layoutPanel.SetColumnSpan(this.lblPlSolTimeVal, 2);
             this.lblPlSolTimeVal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblPlSolTimeVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlSolTimeVal.Location = new System.Drawing.Point(756, 354);
+            this.lblPlSolTimeVal.Location = new System.Drawing.Point(684, 354);
             this.lblPlSolTimeVal.Margin = new System.Windows.Forms.Padding(0);
             this.lblPlSolTimeVal.Name = "lblPlSolTimeVal";
-            this.lblPlSolTimeVal.Size = new System.Drawing.Size(379, 59);
+            this.lblPlSolTimeVal.Size = new System.Drawing.Size(344, 59);
             this.lblPlSolTimeVal.TabIndex = 14;
             this.lblPlSolTimeVal.Text = "00:00:00";
             this.lblPlSolTimeVal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -323,10 +323,10 @@ namespace AstroClock
             this.layoutPanel.SetColumnSpan(this.lblPlSidTimeVal, 2);
             this.lblPlSidTimeVal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblPlSidTimeVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlSidTimeVal.Location = new System.Drawing.Point(567, 413);
+            this.lblPlSidTimeVal.Location = new System.Drawing.Point(513, 413);
             this.lblPlSidTimeVal.Margin = new System.Windows.Forms.Padding(0);
             this.lblPlSidTimeVal.Name = "lblPlSidTimeVal";
-            this.lblPlSidTimeVal.Size = new System.Drawing.Size(378, 65);
+            this.lblPlSidTimeVal.Size = new System.Drawing.Size(342, 65);
             this.lblPlSidTimeVal.TabIndex = 15;
             this.lblPlSidTimeVal.Text = "00:00:00";
             this.lblPlSidTimeVal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -338,10 +338,10 @@ namespace AstroClock
             this.layoutPanel.SetColumnSpan(this.lblGrnSidTime, 2);
             this.lblGrnSidTime.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblGrnSidTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGrnSidTime.Location = new System.Drawing.Point(189, 177);
+            this.lblGrnSidTime.Location = new System.Drawing.Point(171, 177);
             this.lblGrnSidTime.Margin = new System.Windows.Forms.Padding(0);
             this.lblGrnSidTime.Name = "lblGrnSidTime";
-            this.lblGrnSidTime.Size = new System.Drawing.Size(378, 59);
+            this.lblGrnSidTime.Size = new System.Drawing.Size(342, 59);
             this.lblGrnSidTime.TabIndex = 16;
             this.lblGrnSidTime.Text = "Sidereal Time";
             this.lblGrnSidTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -353,10 +353,10 @@ namespace AstroClock
             this.layoutPanel.SetColumnSpan(this.lblPlSidTime, 2);
             this.lblPlSidTime.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblPlSidTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlSidTime.Location = new System.Drawing.Point(189, 413);
+            this.lblPlSidTime.Location = new System.Drawing.Point(171, 413);
             this.lblPlSidTime.Margin = new System.Windows.Forms.Padding(0);
             this.lblPlSidTime.Name = "lblPlSidTime";
-            this.lblPlSidTime.Size = new System.Drawing.Size(378, 65);
+            this.lblPlSidTime.Size = new System.Drawing.Size(342, 65);
             this.lblPlSidTime.TabIndex = 17;
             this.lblPlSidTime.Text = "Sidereal Time";
             this.lblPlSidTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -405,7 +405,7 @@ namespace AstroClock
             this.layoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.layoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.layoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.layoutPanel.Size = new System.Drawing.Size(1135, 478);
+            this.layoutPanel.Size = new System.Drawing.Size(1028, 478);
             this.layoutPanel.TabIndex = 20;
             // 
             // label7
@@ -416,10 +416,10 @@ namespace AstroClock
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Cyan;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(945, 413);
+            this.label7.Location = new System.Drawing.Point(855, 413);
             this.label7.Margin = new System.Windows.Forms.Padding(0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(190, 65);
+            this.label7.Size = new System.Drawing.Size(173, 65);
             this.label7.TabIndex = 25;
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -434,7 +434,7 @@ namespace AstroClock
             this.label6.Location = new System.Drawing.Point(0, 177);
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(189, 59);
+            this.label6.Size = new System.Drawing.Size(171, 59);
             this.label6.TabIndex = 24;
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -449,7 +449,7 @@ namespace AstroClock
             this.label5.Location = new System.Drawing.Point(0, 413);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(189, 65);
+            this.label5.Size = new System.Drawing.Size(171, 65);
             this.label5.TabIndex = 23;
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -461,10 +461,10 @@ namespace AstroClock
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Yellow;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(945, 177);
+            this.label1.Location = new System.Drawing.Point(855, 177);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 59);
+            this.label1.Size = new System.Drawing.Size(173, 59);
             this.label1.TabIndex = 19;
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -486,7 +486,7 @@ namespace AstroClock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1135, 478);
+            this.ClientSize = new System.Drawing.Size(1028, 478);
             this.ContextMenuStrip = this.contextMenu;
             this.Controls.Add(this.layoutPanel);
             this.Name = "ClockForm";

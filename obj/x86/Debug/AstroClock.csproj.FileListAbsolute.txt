@@ -1,0 +1,10 @@
+\\Chestnut\Documents\Richard\School\KEGS\Astronomy\Clocks\astroclock\bin\Debug\AstroClock.exe
+\\Chestnut\Documents\Richard\School\KEGS\Astronomy\Clocks\astroclock\bin\Debug\AstroClock.pdb
+\\Chestnut\Documents\Richard\School\KEGS\Astronomy\Clocks\astroclock\obj\x86\Debug\ResolveAssemblyReference.cache
+\\Chestnut\Documents\Richard\School\KEGS\Astronomy\Clocks\astroclock\obj\x86\Debug\AstroClock.ClockForm.resources
+\\Chestnut\Documents\Richard\School\KEGS\Astronomy\Clocks\astroclock\obj\x86\Debug\AstroClock.Properties.Resources.resources
+\\Chestnut\Documents\Richard\School\KEGS\Astronomy\Clocks\astroclock\obj\x86\Debug\AstroClock.SetLocationForm.resources
+\\Chestnut\Documents\Richard\School\KEGS\Astronomy\Clocks\astroclock\obj\x86\Debug\GenerateResource.read.1.tlog
+\\Chestnut\Documents\Richard\School\KEGS\Astronomy\Clocks\astroclock\obj\x86\Debug\GenerateResource.write.1.tlog
+\\Chestnut\Documents\Richard\School\KEGS\Astronomy\Clocks\astroclock\obj\x86\Debug\AstroClock.exe
+\\Chestnut\Documents\Richard\School\KEGS\Astronomy\Clocks\astroclock\obj\x86\Debug\AstroClock.pdb
