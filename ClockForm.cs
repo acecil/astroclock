@@ -49,7 +49,7 @@ namespace AstroClock
             setLocation(0.464497, "KEGS, Chelmsford");
 
             timer.Tick += new EventHandler(UpdateClock);
-            timer.Interval = 100;
+            timer.Interval = 50;
             timer.Start();
         }
 
