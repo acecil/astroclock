@@ -16,14 +16,7 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using System.IO;
 
 namespace AstroClock
 {
@@ -46,7 +39,7 @@ namespace AstroClock
             coss[4] = 0.0052571745421124;
             coss[5] = 0.00554442532098614;
 
-            setLocation(0.464497, "KEGS, Chelmsford");
+            setLocation(-123.1067, "International Village, Vancouver");
 
             timer.Tick += new EventHandler(UpdateClock);
             timer.Interval = 100;
@@ -85,7 +78,6 @@ namespace AstroClock
             eot = eot.Add(new TimeSpan(0, 0, 0, 0, 500));
             lblGrnEqTimeVal.Text = (eot.Ticks < 0 ?"-":"") + eot.ToString(@"hh\:mm\:ss");
             lblPlEqTimeVal.Text = lblGrnEqTimeVal.Text;
-            //lblPlEqTimeVal.Text = eot.ToString(@"hh\:mm\:ss");
             lblGrnSolTimeVal.Text = solarTimeGrn.ToString("HH:mm:ss");
             lblPlSolTimeVal.Text = solarTimePl.ToString("HH:mm:ss");
             lblGrnSidTimeVal.Text = siderealTimeGrn.ToString(@"hh\:mm\:ss");
@@ -102,7 +94,6 @@ namespace AstroClock
             DisplayLoc += (Math.Floor((.5 + 3600 * Math.Abs(localLongitude)) % 60)).ToString("00") + "\" ";
             DisplayLoc += (localLongitude == 0 ? "" : (localLongitude > 0) ? "E" : "W");
             lblPl.Text = location + " (" + DisplayLoc + ")";
-            //lblPl.Text = location + " (" + localLongitude.ToString() + " degrees " + ((localLongitude > 0) ? "E" : "W") + ")";
         }
 
         private void changeLocationToolStripMenuItem_Click(object sender, EventArgs e)

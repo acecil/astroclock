@@ -16,12 +16,6 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace AstroClock
@@ -76,36 +70,7 @@ namespace AstroClock
                 }
             }
         }
- /*       private double decompose(string ltext)
-
-        {
-            bool numeric = true; 
-            ltext = ltext.Trim();
-            foreach (char i in ltext)
-            {
-                if (!(i >= '0' && i <= '9' || i == '+' || i == '-' || i == '.' || i == ','))
-                { numeric = false;
-                break;
-                }
-            }
-            if (numeric)
-            {
-                return Double.Parse(ltext);
-            }
-            else
-            {
-                int d = 0; int m = 0; int s = 0; double vv;
-                d = ltext.IndexOf('d');
-                vv= Double.Parse(ltext.Substring(0,d));
-                if(vv <0) numeric=true;
-                m = ltext.IndexOf('m');
-                vv += (numeric ? -1 : 1) * Double.Parse(ltext.Substring(d + 1, m-d-1))/60;
-                s = ltext.IndexOf('s');
-                vv += (numeric ? -1 : 1) * Double.Parse(ltext.Substring(m + 1, s-m-1))/3600;
-                return vv;
-            }
-        }
-        */
+ 
         private void radioDD_Click(object sender, EventArgs e)
         {
             NUDDegrees.Enabled = true;
@@ -140,7 +105,6 @@ namespace AstroClock
             if (radioDD.Checked)
             {
                 longitudeVal = (double)NUDDegrees.Value * (radioW.Checked ? -1 : 1);
- //               NUDDegrees.Value = (decimal)Math.Abs(longitudeVal);
                 NUDDMSDegrees.Value = (decimal)Math.Floor(Math.Abs(longitudeVal));
                 NUDDMSMinutes.Value = (decimal)Math.Floor(60 * (Math.Abs(longitudeVal) % 1));
                 NUDDMSSeconds.Value = (decimal)(((60 * Math.Abs(longitudeVal)) % 1) * 60);
