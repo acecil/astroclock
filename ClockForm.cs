@@ -39,7 +39,7 @@ namespace AstroClock
             coss[4] = 0.0052571745421124;
             coss[5] = 0.00554442532098614;
 
-            setLocation(-123.1067, "International Village, Vancouver");
+            setLocation(0.5464, "Chestnut Cottage");
 
             timer.Tick += new EventHandler(UpdateClock);
             timer.Interval = 100;
